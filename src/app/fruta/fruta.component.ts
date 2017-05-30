@@ -25,6 +25,18 @@ export class FrutaComponent {
     this.cambiarValor();
     console.log(this.cadena);
     
+
+    //variables y alcance
+    var uno = 8;
+    var dos = 15;
+
+    if(uno === 8){
+      let uno = 3;
+      var dos = 88;
+      console.log("dentro del if: " + uno + " " + dos);
+    }
+
+    console.log("fuera del if: " + uno + " " + dos);
   }
 
   cambiarValor(){
