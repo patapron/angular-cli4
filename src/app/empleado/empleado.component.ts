@@ -13,6 +13,7 @@ export class EmpleadoComponent {
     public empleado: Empleado;
     public trabajadores: Array<Empleado>;
     public trabajador_externo:boolean;
+    public color:string;
 
     constructor() {
         this.empleado = new Empleado('Miguel', 39, 'programador', false);
@@ -22,6 +23,7 @@ export class EmpleadoComponent {
             new Empleado('jose', 21, 'leader', false)
         ];
         this.trabajador_externo = false;
+        this.color ='green';
     }
 
 
