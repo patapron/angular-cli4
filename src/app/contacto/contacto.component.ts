@@ -22,5 +22,11 @@ export class ContactoComponent {
         });
     }
 
+    redirigir() {
+        this._router.navigate(['/contacto', 'prueba de redirecionamiento']);
+    }
 
+        redirigir2() {
+        this._router.navigate(['/home']);
+    }
 }
