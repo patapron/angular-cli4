@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
+import { MdButtonModule, MdCheckboxModule, MdMenuModule, MaterialModule } from '@angular/material';
 
 import { routing, appRoutingProviders } from 'app/app.routing';
 import { AppComponent } from './app.component';
@@ -10,6 +12,7 @@ import { FrutaComponent } from './fruta/fruta.component';
 import { EmpleadoComponent } from './empleado/empleado.component';
 import { ContactoComponent } from 'app/contacto/contacto.component';
 import { HomeComponent } from 'app/home/home.component';
+
 
 @NgModule({
   declarations: [
