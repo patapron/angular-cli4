@@ -1,26 +1,16 @@
-<div fxLayout="row" fxLayoutAlign="end center">
-    <div _ngcontent-c2="" class="blocks one" ng-reflect-class-base="blocks one">1</div>
-    <div _ngcontent-c2="" class="blocks two_h" ng-reflect-class-base="blocks">2</div>
-    <div _ngcontent-c2="" class="blocks three" ng-reflect-class-base="blocks three">3</div>
-    <div _ngcontent-c2="" class="blocks four_h" ng-reflect-class-base="blocks">4</div>
-    <div _ngcontent-c2="" class="blocks fives" ng-reflect-class-base="blocks fives">5</div>
-</div>
+<h3>
+  {{title}}
+</h3>
+<hr>
+<nav>
+  <a [routerLink]="['/pagina-principal']" routerLinkActive="activado">home</a>
+  <a [routerLink]="['/fruta']" routerLinkActive="activado">fruta</a>
+  <a [routerLink]="['/empleado']" routerLinkActive="activado">empleado</a>
+  <a [routerLink]="['/contacto']" routerLinkActive="activado">Contacto</a>
+</nav>
+<hr>
+<!--<fruta></fruta>-->
+<!--<empleado-tag></empleado-tag>-->
 
+<router-outlet></router-outlet>
 
-
-<md-menu #appMenu="mdMenu">
-    <button md-menu-item> Settings </button>
-    <button md-menu-item> Help </button>
-</md-menu>
-
-<button md-icon-button [mdMenuTriggerFor]="appMenu">
-   <md-icon>more_vert</md-icon>
-</button>
-
-
-<h1>
-    {{title}}
-</h1>
-<button md-fab><md-icon>check</md-icon></button>
-<fruta></fruta>
-<empleado-tag></empleado-tag>

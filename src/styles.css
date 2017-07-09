@@ -1,9 +1,7 @@
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
-.blocks {
-    min-width: 75px;
-    min-height: 50px;
-    border-radius: 3px;
-    border: 1px solid black;
-    padding: 3px;
-    margin: 3px;
+/* You can add global styles to this file, and also import other style files */
+.activado{
+    font-weight: bold;
 }
+
+a:link {
+    text-decoration: none;

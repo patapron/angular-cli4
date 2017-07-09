@@ -5,34 +5,30 @@ import { HttpModule } from '@angular/http';
 import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
 import { MdButtonModule, MdCheckboxModule, MdMenuModule, MaterialModule } from '@angular/material';
 
+import { routing, appRoutingProviders } from 'app/app.routing';
 import { AppComponent } from './app.component';
+
 import { FrutaComponent } from './fruta/fruta.component';
 import { EmpleadoComponent } from './empleado/empleado.component';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import { ContactoComponent } from 'app/contacto/contacto.component';
+import { HomeComponent } from 'app/home/home.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     FrutaComponent, 
-    EmpleadoComponent
+    EmpleadoComponent,
+    HomeComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    MaterialModule,
-    BrowserAnimationsModule,
-    NoopAnimationsModule,
-    MdButtonModule,
-    MdCheckboxModule,
-    MdMenuModule,
-    FlexLayoutModule
-  ],exports:[
-        BrowserAnimationsModule,
-        NoopAnimationsModule
+    routing
   ],
-  providers: [],
+  providers: [appRoutingProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
