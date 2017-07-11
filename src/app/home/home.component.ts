@@ -14,6 +14,8 @@ export class HomeComponent {
 
     public fecha;
 
+    public nombre = 'Miguel Angel Navas';
+
     constructor(
         private _ropaService: RopaService
     ) {

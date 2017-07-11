@@ -10,6 +10,7 @@ import { FrutaComponent } from 'app/fruta/fruta.component';
 import { EmpleadoComponent } from 'app/empleado/empleado.component';
 import { ContactoComponent } from 'app/contacto/contacto.component';
 import { HomeComponent } from 'app/home/home.component';
+import { ConversorPipe } from 'app/pipes/conversor.pipe';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { HomeComponent } from 'app/home/home.component';
     FrutaComponent,
     EmpleadoComponent,
     HomeComponent,
-    ContactoComponent
+    ContactoComponent,
+    ConversorPipe
   ],
   imports: [
     BrowserModule,
