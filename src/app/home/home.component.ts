@@ -12,9 +12,15 @@ export class HomeComponent {
     public listado_ropa: string[];
     public prenda_a_guardar: string;
 
+    public fecha;
+
+    public nombre = 'Miguel Angel Navas';
+
     constructor(
         private _ropaService: RopaService
-    ) { }
+    ) {
+        this.fecha = new Date();
+    }
 
     ngOnInit() {
         this.listado_ropa = this._ropaService.getRopa();
@@ -26,7 +32,7 @@ export class HomeComponent {
         this.prenda_a_guardar = null;
     }
 
-    eliminarPrenda(index:number){
+    eliminarPrenda(index: number) {
         this._ropaService.deleteRopa(index);
     }
 }
