@@ -9,13 +9,19 @@ import { Coche } from 'app/coches/coche';
 
 export class CochesComponent {
     public coche: Coche;
+    public coches: Coche[];
 
     constructor() {
         this.coche = new Coche('', '', '');
+        this.coches = [
+            new Coche('Seat Panda', '70', 'blanco'),
+            new Coche('Ford Fiesta', '120', 'negro')
+        ];
     }
 
-    onSubmit(){
-        console.log(this.coche);
+    onSubmit() {
+        this.coches.push(this.coche);
+        this.coche = new Coche('', '', '');
     }
 
 }
