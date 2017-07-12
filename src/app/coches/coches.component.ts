@@ -1,22 +1,44 @@
 import { Component } from '@angular/core';
 import { Coche } from 'app/coches/coche';
 
+import { PeticionesService } from '../services/peticiones.service';
+
 
 @Component({
     selector: 'coches',
-    templateUrl: './coches.component.html'
+    templateUrl: './coches.component.html',
+    providers: [PeticionesService]
 })
 
 export class CochesComponent {
     public coche: Coche;
     public coches: Coche[];
+    public articulos;
 
-    constructor() {
+    constructor(
+        private _peticionesService: PeticionesService
+    ) {
         this.coche = new Coche('', '', '');
         this.coches = [
             new Coche('Seat Panda', '70', 'blanco'),
             new Coche('Ford Fiesta', '120', 'negro')
         ];
+    }
+
+    ngOnInit() {
+        this._peticionesService.getArticulos().subscribe(
+            result => {
+                this.articulos = result;
+
+                if (!this.articulos) {
+                    console.log('Error en el servidor');
+                }
+            },
+            error => {
+                var errorMessage = <any>error;
+                console.log(errorMessage);
+            }
+        )
     }
 
     onSubmit() {
